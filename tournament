@@ -1,17 +1,3 @@
-/*
-Реализовать в программе логику проведения футбольного (или любого другого) турнира в соответствии со следующими требованиями:
-Генерируются 12 случайных команд. Команда имеет название и позицию в рейтинге.
-
-Программа генерирует расписание турнира так, чтобы каждая команда сыграла со всеми другими дважды. 
-Расписание представляет собой список строк, вида "(команда 1) vs. (команда 2): (очки первой команды)-(очки второй команды). День: (номер дня)."
-Расписание должно соответствовать следующим требованиям:
-в один день не может быть более двух матчей;
-одна и та же команда не может играть два дня подряд;
-результаты матчей определяются случайно (очки команды в диапазоне [0, 7]).
-Должна быть возможность запросить рейтинговую таблицу команд на любой из матчевых дней, вывести расписание всех сыгранных матчей вплоть до определенного дня
-Программа должна отдельно выводить тройку призеров и их счет на последний день турнира. Если на момент окончания турнира на первых местах команды с одинаковым числом очков, то их порядок определяется по алфавиту (по названию команды).
-*/
-
 struct Tournament {
     
     //Объявляем struct для каждой команды
@@ -117,6 +103,7 @@ struct Tournament {
 // Составляем расписание и присваиваем переменной
     
     let schedule = TeamList(12).schedule
+    
 
 // Создаëм структуру MatchDay, в которую будут записываться результаты каждого дня + сохраняться таблица результатов
     struct MatchDay {
@@ -153,6 +140,7 @@ struct Tournament {
             if team1score == team2score {
                 teamList[schedule[day - 1][0] - 1].draws += 1
                 teamList[schedule[day - 1][1] - 1].draws += 1
+                continue
             }
             if team1score > team2score {
                 teamList[schedule[day - 1][0] - 1].wins += 1
@@ -173,8 +161,8 @@ struct Tournament {
             
             //print(matchDaytmp.tournamentTable)
         }
+        print("Match day count \(matchDayResult.count)")
         
-        //matchDayResult.forEach{print("Day №\($0.day), Team\($0.teamplaying) and they score\($0.teamscore)")}
     }
     
     func sortTeams(_ teams: [Team]) -> [Team] {
@@ -194,12 +182,13 @@ struct Tournament {
     }
     
     func printable(_ day: Int) {
-        guard day > 0 && day < schedule.count else {return print("Day out of range")}
+        //FIXME: crush if day > 119
+        guard day > 0 && day <= schedule.count else {return print("Day out of range")}
         var teams = matchDayResult[day - 1].teams
         teams = sortTeams(teams)
         
         print("Rating table in \(day)th day")
-        var result = "Team      | MP |  W |  D |  L |  P"
+        var result = "Team        MP    W     D     L     P"
 
         for team in teams {
                  let name = team.name
@@ -208,18 +197,24 @@ struct Tournament {
                  for _ in 1...numberOfSpaces {
                      result += " "
                  }
-                 result += "|  \(team.matchesPlayed) |  \(team.wins) |  \(team.draws) |  \(team.losses) |  \(team.points)"
+                var shuffleMP = "", shuffleW = "", shuffleD = "", shuffleL = ""
+                if team.matchesPlayed < 10 {shuffleMP = " "}
+                if team.wins < 10 {shuffleW = " "}
+                if team.draws < 10 {shuffleD = " "}
+                if team.losses < 10 {shuffleL = " "}
+                result += "| \(team.matchesPlayed)\(shuffleMP) |  \(team.wins)\(shuffleW) |  \(team.draws)\(shuffleD) |  \(team.losses)\(shuffleL) |  \(team.points)"
              }
         print(result)
     }
 
     func printSchedule(_ day: Int) {
-        guard day > 0 && day < schedule.count else {return print("Day out of range")}
+        //FIXME: crush if day > 119
+        guard day > 0 && day <= schedule.count else {return print("Day out of range")}
         for days in 0..<day {
             let currentDayResults = matchDayResult[days]
             
             print("\(teamList[currentDayResults.teamplaying.0 - 1].name) vs \(teamList[currentDayResults.teamplaying.1 - 1].name): \(currentDayResults.teamscore.0) - \(currentDayResults.teamscore.0). Day: \(days + 1)th")
-            //print("Team1 \(teamList[currentDayResults.teamplaying.0 - 1].name) vs Team2: 1 - 2. Day: \(days + 1)th")
+            
         }
     }
     
@@ -227,7 +222,7 @@ struct Tournament {
         var teams = matchDayResult.last!.teams
         teams = sortTeams(teams)
         print("Winners of tournament")
-        var result = "Team      | MP |  W |  D |  L |  P"
+        var result = "Team         MP    W     D    L    P"
               
         for i in 0...2 {
                  let name = teams[i].name
@@ -250,6 +245,7 @@ var tournament = Tournament()
 
 // Проводим чемпионат
 tournament.start()
+print(tournament.schedule.count)
 
 // Запрашиваем расписание матчей. Расписание представляет собой список строк, вида "(команда 1) vs. (команда 2): (очки первой команды)-(очки второй команды). День: (номер дня).
 print("-------")
@@ -258,7 +254,7 @@ tournament.printSchedule(5)
 
 //Запрашиваем рейтинговую таблицу команд на определенный день
 print("-------")
-tournament.printable(15)
+//tournament.printable(105)
 
 // Выводим результаты победителя и призеров турнира
 print("-------")
