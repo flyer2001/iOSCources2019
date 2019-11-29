@@ -1,6 +1,6 @@
 # Домашние задания
 
-![Demo](Altarix Api Homework.gif)
+![Demo](Altarix_Api_Homework.gif)
 
 ## Оглавление:
 
