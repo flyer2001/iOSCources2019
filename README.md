@@ -1,56 +1,17 @@
-# Домашние задания
+Курсы подготовки iOS разработчиков в компании Altarix. 
 
-![Demo](Altarix_Api_Homework.gif)
+# Домашние задания (Портфолио)
 
-## Оглавление:
+## Основы языка Swift (опционалы, коллекции, функции, замыкания, управление памятью)
 
-* [Общие сведения](README.md#common)
-* [Правила выполнения домашних заданий](README.md#codeStyle)
-* [Лицензия на использование материала](README.md#license)
+[Выполненная домашняя работа](https://github.com/flyer2001/iOSCources2019/blob/master/lesson%2002%20HW%20exercises.playground/Contents.swift)
 
+[Исходный код задания](https://github.com/Altarix/iOSCources2019/blob/master/02%20-%20Basic%20Swift/Homework.md)
 
-## <a name="common"></a>Общие сведения
+## Механизмы ООП в Swift (протоколы, классы, структуры, перечисления, методы, расширения, контроль доступа) 
 
-* Материал по каждому уроку лежит в отдельной папки: 01 - [Name 1], 02 - [Name 2], 03 - [Name 3]. Название в латинице.
-* Материалы будут включать различные описания и домашние задания, оформляемые в [md файлах](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-* Код проектов может включать [Pod - файлы](https://guides.cocoapods.org/using/the-podfile.html) с помощью которых необходимо будет выкачивать зависимый код библиотек, поэтому кроме XCode 11, на компьютере должен быть уставновлен [Cocoapods](https://cocoapods.org/)
+[Организовать футбольный чемпионат: турнирная таблица, результаты](https://github.com/flyer2001/iOSCources2019/tree/master/Lesson%2003%20HW%20)
 
-## <a name="codeStyle"></a>Правила выполнения домашних заданий
+[Перечисление кодов состояния http](https://github.com/flyer2001/iOSCources2019/tree/master/Lesson%2003%20HW%20)
 
-* Исходный код необходимо хранить в открытом репозиторие на [github](https://github.com) или [bitbucket](https://bitbucket.org/)
-* Код необходимо оформлять согласно [guidlines от Apple](https://swift.org/documentation/api-design-guidelines/#fundamentals). Больше правил и описания вы найдете [здесь](https://google.github.io/swift/)
-* Дизайн вашего решения лучше оформлять согласно [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/)
-* Пример кода:
-```swift
-class InputController: BxInputController {
-
-    @IBOutlet var nameLabel : UILabel!
-    
-    var productId: String?
-    private var products : [Product] = []
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        products = [
-            Product(id: "1", name: "value1"),
-            Product(id: "2", name: "value2"),
-            Product(id: "3", name: "value3")
-        ]
-    }
-
-    @IBAction clickProduct(_ sender: Any) {
-        guard let productId = self.productId else {
-            return
-        }
-        if let product = products.first{ $0.id == productId } {
-            print(product.name)
-        }
-    }
-}
-
-```
-
-## <a name="license"></a>Лицензия
-
-Материал данного курса можно использовать как для обучения, так и в комерческих целях, согласно ограничениям [лицензии MIT](LICENSE)
+[Реализовать вычисление определителя матрицы](https://github.com/flyer2001/iOSCources2019/tree/master/Lesson%2003%20HW%20)
