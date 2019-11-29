@@ -33,10 +33,8 @@ class ViewController: UIViewController {
         guard let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any] else {return}
         guard let responseJSON = json["response"] as? [[String: Any]] else {return}
         
-        //FIXME: если UITextField пустая, то приходится обращаться к несуществующему элементу массива и ошибка
-        
-        guard let firstname = responseJSON[0]["first_name"] as? String else { return }
-        guard let lastname = responseJSON[0]["last_name"] as? String else {return}
+        guard let firstname = responseJSON.first?["first_name"] as? String else { return }
+        guard let lastname = responseJSON.first?["last_name"] as? String else {return}
         guard let photo_200_orig = responseJSON[0]["photo_200_orig"] as? String else {return}
         
         let photo_200_origURL = URL(string: photo_200_orig)
