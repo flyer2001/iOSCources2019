@@ -1,0 +1,6 @@
+framework module Pods_Altarix_API_Homework {
+  umbrella header "Pods-Altarix API Homework-umbrella.h"
+
+  export *
+  module * { export * }
+}
