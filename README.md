@@ -15,3 +15,21 @@
 [Перечисление кодов состояния http](https://github.com/flyer2001/iOSCources2019/tree/master/Lesson%2003%20HW%20)
 
 [Реализовать вычисление определителя матрицы](https://github.com/flyer2001/iOSCources2019/tree/master/Lesson%2003%20HW%20)
+
+
+## UITableView, AutoLayout (основы и практика), XIBs
+
+[Таблица с заголовками (section header)](https://github.com/flyer2001/iOSCources2019/tree/master/Lesson%2006%20HW%20-%20SamaraCityTableView)
+
+![Demo](https://github.com/flyer2001/iOSCources2019/blob/master/Lesson%2006%20HW%20-%20SamaraCityTableView/SamaraCityTableView_demo.gif)
+
+## Работа с многопоточностью (GCD, REST API, URLSession) 
+
+[Приложение, принимающее json данные (взаимодействие с VK API)](https://github.com/flyer2001/iOSCources2019/tree/master/Lesson%2007%20HW%20-%20VkDataGetter)
+
+![Demo](https://github.com/flyer2001/iOSCources2019/blob/master/Lesson%2007%20HW%20-%20VkDataGetter/VKDataGetterDemo.gif)
+
+## Разработка сетевого слоя приложения (Alamofire, JSON, Codable/Decodable) 
+[Загрузка списка тем курсов через API с помощью Alamofire](https://github.com/flyer2001/iOSCources2019/tree/master/Lesson%2008%20Altarix%20API%20Homework)
+
+![Demo](https://github.com/flyer2001/iOSCources2019/blob/master/Lesson%2008%20Altarix%20API%20Homework/Altarix_Api_Homework.gif)
