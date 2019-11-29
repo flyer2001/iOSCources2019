@@ -8,7 +8,7 @@
 
 3. Задание повышанной сложности: используйте [PromiseKit](https://github.com/mxcl/PromiseKit) для того чтобы сделать сетевой слой красивее
 
-![Demo](Altarix Api Homework.gif)
+![Demo](Altarix_Api_Homework.gif)
 
 ### ver 1.0
 Реализован базовый функционал:
