@@ -18,7 +18,7 @@
 
 ## Interface Builder, UIKit, взаимодействие UIViewController с Interface Builder в сторибордах (IBAction, IBOutlet) 
 
-[При нажатии кнопки выводится результат](https://github.com/flyer2001/iOSCources2019/blob/master/Lesson%2004%20Interface%20Builder/demo.gif)
+![При нажатии кнопки выводится результат](https://github.com/flyer2001/iOSCources2019/blob/master/Lesson%2004%20Interface%20Builder/demo.gif)
 
 ## UITableView, AutoLayout (основы и практика), XIBs
 
