@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var count = 0
+    var count = 1
     @IBOutlet weak var textLabel: UILabel!
 
     override func viewDidLoad() {
