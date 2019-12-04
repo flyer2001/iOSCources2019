@@ -6,6 +6,8 @@ target 'Altarix API Homework' do
   use_frameworks!
 
   # Pods for Altarix API Homework
-  pod 'Alamofire' 
+  pod 'Alamofire'
+  pod 'RealmSwift'
+  pod 'KeychainAccess'
 
 end

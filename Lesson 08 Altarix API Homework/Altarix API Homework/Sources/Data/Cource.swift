@@ -8,8 +8,6 @@
 
 import Foundation
 
-import Foundation
-
 struct Cource : Codable {
     let event: Event
 }
