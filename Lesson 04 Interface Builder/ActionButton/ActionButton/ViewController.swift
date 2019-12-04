@@ -10,11 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var count = 0
+    @IBOutlet weak var textLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+     
     }
 
-
+    @IBAction func pressButton(_ sender: Any) {
+        textLabel.text = "You press button \(count) times"
+        count += 1
+    }
+    
 }
 
