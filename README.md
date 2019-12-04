@@ -16,6 +16,9 @@
 
 [Реализовать вычисление определителя матрицы](https://github.com/flyer2001/iOSCources2019/tree/master/Lesson%2003%20HW%20)
 
+## Interface Builder, UIKit, взаимодействие UIViewController с Interface Builder в сторибордах (IBAction, IBOutlet) 
+
+[При нажатии кнопки выводится результат](https://github.com/flyer2001/iOSCources2019/blob/master/Lesson%2004%20Interface%20Builder/demo.gif)
 
 ## UITableView, AutoLayout (основы и практика), XIBs
 
