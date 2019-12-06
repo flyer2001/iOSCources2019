@@ -8,6 +8,5 @@ target 'Altarix API Homework' do
   # Pods for Altarix API Homework
   pod 'Alamofire'
   pod 'RealmSwift'
-  pod 'KeychainAccess'
 
 end

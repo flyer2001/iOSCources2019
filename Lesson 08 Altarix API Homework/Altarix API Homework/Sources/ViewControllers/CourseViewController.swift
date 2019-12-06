@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Realm
+import RealmSwift
 
 class CourseViewController: UIViewController {
     
     var descriptionTableView = UITableView()
     var descriptionFromVC: String = ""
-    var linksFromVC: [Links] = []
+    var linksFromVC = List<Links>()
     
     override func viewDidLoad() {
         super.viewDidLoad()

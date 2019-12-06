@@ -17,7 +17,7 @@ final public class APIServices {
     
     public static let eventMethod = "/api/event"
     
-    public func getObject<T:Codable>(
+    public func getObject<T:Decodable>(
         method: String,
         params: Parameters,
         handler: @escaping (_ object: T?, _ error: Error?) -> Void) {
@@ -26,9 +26,8 @@ final public class APIServices {
         
         request(resultURL, parameters: params).responseData(){ response in
             response.result.withValue { data in
-                    do {
+                    do {                      
                         let result = try JSONDecoder.init().decode(T.self, from: data)
-                        
                         handler(result, nil)
                     } catch (let error) {
                         handler(nil, error)
@@ -39,4 +38,11 @@ final public class APIServices {
         }
     }
     
+   func getObjectLocal() -> Cource? {
+    return nil
+    }
 }
+    
+    
+
+

@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Загрузка...-->
+        <!--View Controller-->
         <scene sceneID="dsO-nO-cSC">
             <objects>
                 <tableViewController id="4Rt-1W-Mmt" customClass="ViewController" customModule="Altarix_API_Homework" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,9 +46,20 @@
                             <outlet property="delegate" destination="4Rt-1W-Mmt" id="hqD-tn-aMM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Загрузка..." id="vy8-U4-uZP"/>
+                    <navigationItem key="navigationItem" id="vy8-U4-uZP">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NSx-tE-3Cs">
+                            <rect key="frame" x="13" y="7" width="389" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Обновить"/>
+                            <connections>
+                                <action selector="refreshButton:" destination="4Rt-1W-Mmt" eventType="touchUpInside" id="UKw-FP-S55"/>
+                            </connections>
+                        </button>
+                    </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="ity-Eh-dZX" id="Ogy-c3-pTc"/>
+                        <outlet property="refreshButton" destination="NSx-tE-3Cs" id="vnA-XQ-Oo3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PWG-Re-tzg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

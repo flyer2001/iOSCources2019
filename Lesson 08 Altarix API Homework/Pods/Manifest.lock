@@ -1,6 +1,5 @@
 PODS:
   - Alamofire (4.9.1)
-  - KeychainAccess (4.1.0)
   - Realm (4.1.1):
     - Realm/Headers (= 4.1.1)
   - Realm/Headers (4.1.1)
@@ -9,22 +8,19 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - KeychainAccess
   - RealmSwift
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - KeychainAccess
     - Realm
     - RealmSwift
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  KeychainAccess: 445e28864fe6d3458b41fa211bcdc39890e8bd5a
   Realm: 25f0a8244cbb1c2271c922963ea8666fc2d8104d
   RealmSwift: 9e2657b33764f80e4a4dffd6d440e24715782052
 
-PODFILE CHECKSUM: ebec176d01577c4ec273d26aeacc07935ef19efd
+PODFILE CHECKSUM: 12ebeb2e5e60ff7e15fdd3179a1902a475a0a2e6
 
 COCOAPODS: 1.8.4

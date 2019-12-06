@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		62238EAF238FF3F30031F988 /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62238EAE238FF3F30031F988 /* CourseViewController.swift */; };
 		6226514C238DB4F900B34654 /* Cource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6226514B238DB4F900B34654 /* Cource.swift */; };
+		623C3CF62398234100E96555 /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623C3CF52398234100E96555 /* DB.swift */; };
 		62CD0512238D566D00640CC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CD0511238D566D00640CC7 /* AppDelegate.swift */; };
 		62CD0514238D566D00640CC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CD0513238D566D00640CC7 /* SceneDelegate.swift */; };
 		62CD0516238D566D00640CC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CD0515238D566D00640CC7 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 		0A71477A59D3589CE20EC49D /* Pods-Altarix API Homework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Altarix API Homework.debug.xcconfig"; path = "Target Support Files/Pods-Altarix API Homework/Pods-Altarix API Homework.debug.xcconfig"; sourceTree = "<group>"; };
 		62238EAE238FF3F30031F988 /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
 		6226514B238DB4F900B34654 /* Cource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cource.swift; sourceTree = "<group>"; };
+		623C3CF52398234100E96555 /* DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
 		62CD050E238D566D00640CC7 /* Altarix API Homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Altarix API Homework.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62CD0511238D566D00640CC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62CD0513238D566D00640CC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				62CD052A238D598000640CC7 /* APIServices.swift */,
 				6226514B238DB4F900B34654 /* Cource.swift */,
+				623C3CF52398234100E96555 /* DB.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				62CD052B238D598000640CC7 /* APIServices.swift in Sources */,
 				62CD0514238D566D00640CC7 /* SceneDelegate.swift in Sources */,
 				62238EAF238FF3F30031F988 /* CourseViewController.swift in Sources */,
+				623C3CF62398234100E96555 /* DB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
