@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationController" customModule="AutoLayoutForm" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация бесплатна и не займет у вас много времени" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LQ-e6-aVF">
+                    <rect key="frame" x="56" y="25" width="784" height="19.333333333333329"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDf-GB-zbg">
+                    <rect key="frame" x="56" y="52.333333333333343" width="784" height="70"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POx-A5-gqz">
+                            <rect key="frame" x="0.0" y="0.0" width="49" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Введите email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="04c-sV-5lz">
+                            <rect key="frame" x="0.0" y="28.999999999999993" width="784" height="34"/>
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="F5R-7D-QKk"/>
+                        <constraint firstAttribute="trailing" secondItem="04c-sV-5lz" secondAttribute="trailing" id="R8r-7T-eu3"/>
+                        <constraint firstItem="POx-A5-gqz" firstAttribute="leading" secondItem="sDf-GB-zbg" secondAttribute="leading" id="bQm-q3-aqh"/>
+                        <constraint firstItem="04c-sV-5lz" firstAttribute="top" secondItem="POx-A5-gqz" secondAttribute="bottom" constant="8" id="gbe-v0-FeX"/>
+                        <constraint firstItem="POx-A5-gqz" firstAttribute="top" secondItem="sDf-GB-zbg" secondAttribute="top" id="h5S-d2-a2B"/>
+                        <constraint firstItem="04c-sV-5lz" firstAttribute="leading" secondItem="POx-A5-gqz" secondAttribute="leading" id="qsd-Pa-3Rj"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efc-QZ-8ZZ">
+                    <rect key="frame" x="56" y="146.33333333333334" width="784" height="70"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xb-0k-pkL">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Введите пароль" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ogD-MP-TUp">
+                            <rect key="frame" x="0.0" y="29" width="784" height="34"/>
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="9xb-0k-pkL" firstAttribute="top" secondItem="efc-QZ-8ZZ" secondAttribute="top" id="7WF-uk-rRR"/>
+                        <constraint firstAttribute="height" constant="70" id="9UO-By-dex"/>
+                        <constraint firstItem="ogD-MP-TUp" firstAttribute="top" secondItem="9xb-0k-pkL" secondAttribute="bottom" constant="8" id="J3z-Fo-WA1"/>
+                        <constraint firstAttribute="trailing" secondItem="ogD-MP-TUp" secondAttribute="trailing" id="Zls-ij-uzi"/>
+                        <constraint firstItem="ogD-MP-TUp" firstAttribute="leading" secondItem="9xb-0k-pkL" secondAttribute="leading" id="f9U-Ey-ANv"/>
+                        <constraint firstItem="9xb-0k-pkL" firstAttribute="leading" secondItem="efc-QZ-8ZZ" secondAttribute="leading" id="xhL-o1-iX6"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8B-Iw-1U9">
+                    <rect key="frame" x="56" y="246.33333333333337" width="784" height="30"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="ЗАРЕГИСТРИРОВАТЬСЯ">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="1LQ-e6-aVF" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="0RL-6L-rVa"/>
+                <constraint firstItem="efc-QZ-8ZZ" firstAttribute="top" secondItem="sDf-GB-zbg" secondAttribute="bottom" constant="24" id="CXm-zh-CME"/>
+                <constraint firstItem="efc-QZ-8ZZ" firstAttribute="leading" secondItem="1LQ-e6-aVF" secondAttribute="leading" id="DpG-qn-Mau"/>
+                <constraint firstItem="sDf-GB-zbg" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="EXd-xN-240"/>
+                <constraint firstItem="sDf-GB-zbg" firstAttribute="firstBaseline" secondItem="1LQ-e6-aVF" secondAttribute="baseline" constant="14" symbolType="layoutAnchor" id="Xm8-YP-9Bd"/>
+                <constraint firstItem="b8B-Iw-1U9" firstAttribute="leading" secondItem="1LQ-e6-aVF" secondAttribute="leading" id="bAp-Qa-wVr"/>
+                <constraint firstItem="b8B-Iw-1U9" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="bZ1-AH-em3"/>
+                <constraint firstItem="efc-QZ-8ZZ" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="cHu-9E-Hjj"/>
+                <constraint firstItem="1LQ-e6-aVF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="i7j-1z-2DY"/>
+                <constraint firstItem="b8B-Iw-1U9" firstAttribute="top" secondItem="efc-QZ-8ZZ" secondAttribute="bottom" constant="30" id="lEv-Py-fFz"/>
+                <constraint firstItem="sDf-GB-zbg" firstAttribute="leading" secondItem="1LQ-e6-aVF" secondAttribute="leading" id="niD-Or-45T"/>
+                <constraint firstItem="1LQ-e6-aVF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="qmL-FU-Jto"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="136.23188405797103" y="79.017857142857139"/>
+        </view>
+    </objects>
+</document>
