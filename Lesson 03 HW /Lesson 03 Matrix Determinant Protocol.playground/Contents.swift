@@ -1,3 +1,5 @@
+import Foundation
+
 protocol MatrixTestable {
     
     // Constructor
@@ -11,47 +13,30 @@ protocol MatrixTestable {
 }
 
 
-struct Matrix: MatrixTestable {
+class Matrix: MatrixTestable {
+    
     let dimension: Int
+    var data: [[Int]]
     
     func determinant() -> Int {
-        return 2 //calculate determine
+        
+        // здесь по идее надо считать с помощью рекурсии определитель матрицы, но не осилил
+        func determinate (matrix: [[Int]], n: Int) -> Int {
+        return matrix[0][0] * matrix [1][1] - matrix[0][1] * matrix[1][0]
+        }
+        
+        if dimension != 2 {return 0}  // костыль))))
+        return Int(determinate(matrix: data, n: dimension))
+        
     }
     
-    init(dimension: Int, elementConstructor: ((Int, Int) -> Int)) {
+    required init(dimension: Int, elementConstructor: ((Int, Int) -> Int)) {
         self.dimension = dimension
-    }
-    
-    func createMatrix() -> [[Int]]{
-        return Array(repeating: Array(repeating: 0, count: dimension), count: dimension)
+        self.data = Array(repeating: Array(repeating: 0, count: dimension), count: dimension)
     }
 
 }
 
-var matrix = Matrix(dimension: 3, elementConstructor: ((Int, Int) -> Int))
-var matrixData = matrix.createMatrix()
-matrixData = [[0, 1, 2], [2, 3, 4], [4, 5, 6]]
-
-
-
-
-//func determinant<T : SignedNumericArithmeticType>(matrix: Matrix<T>) -> T {
-//assert(matrix.isSquare, "Cannot find the determinant of a non-square matrix")
-//assert(!matrix.isEmpty, "Cannot find the determinant of an empty matrix")
-//// Base case
-//    if matrix.count == 1 { return matrix[0,0] }
-//else {
-//// Recursive case
-//        var sum: T = 0
-//var multiplier: T = 1
-//let topRow = matrix.rows[0]
-//for (column, num) in topRow.enumerate() {
-//var subMatrix = matrix
-//            subMatrix.removeRow(atIndex: 0)
-//            subMatrix.removeColumn(atIndex: column)
-//            sum += num * multiplier * determinant(subMatrix)
-//            multiplier *= (0-1) // swift is buggy
-//        }
-//return sum
-//    }
-//}
+var matrix = Matrix(dimension: 2, elementConstructor: {row, column in return 2 * row + column})
+matrix.data = [[0, 1], [5, 6]]
+let determinant = matrix.determinant()
