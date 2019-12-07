@@ -36,3 +36,8 @@
 [Загрузка списка тем курсов через API с помощью Alamofire и хранение в кэше с помощью Realweb](https://github.com/flyer2001/iOSCources2019/tree/master/Lesson%2008%20Altarix%20API%20Homework)
 
 ![Demo](https://github.com/flyer2001/iOSCources2019/blob/master/Lesson%2008%20Altarix%20API%20Homework/demo.gif)
+
+## AutoLayout 
+[Сверстать макет окна регистрации с помощью Autolayout](https://github.com/flyer2001/iOSCources2019/tree/master/Lesson%2008%20AutoLayout%20HW)
+
+![Demo](https://github.com/flyer2001/iOSCources2019/blob/master/Lesson%2008%20AutoLayout%20HW/demo.gif)
