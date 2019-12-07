@@ -41,3 +41,8 @@
 [Сверстать макет окна регистрации с помощью Autolayout](https://github.com/flyer2001/iOSCources2019/tree/master/Lesson%2008%20AutoLayout%20HW)
 
 ![Demo](https://github.com/flyer2001/iOSCources2019/blob/master/Lesson%2008%20AutoLayout%20HW/demo.gif)
+
+## Компоненты UIKit, анимации, делегаты, UIGestureRecognizers  
+[Разные виды анимации и взаимодействие с элементами разных view](https://github.com/flyer2001/iOSCources2019/tree/master/Lesson%2009%20-%20Animation)
+
+![Demo](https://github.com/flyer2001/iOSCources2019/blob/master/Lesson%2009%20-%20Animation/demo.gif)
