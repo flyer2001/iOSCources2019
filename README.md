@@ -33,6 +33,6 @@
 ![Demo](https://github.com/flyer2001/iOSCources2019/blob/master/Lesson%2007%20HW%20-%20VkDataGetter/VKDataGetterDemo.gif)
 
 ## Разработка сетевого слоя приложения (Alamofire, JSON, Codable/Decodable) 
-[Загрузка списка тем курсов через API с помощью Alamofire](https://github.com/flyer2001/iOSCources2019/tree/master/Lesson%2008%20Altarix%20API%20Homework)
+[Загрузка списка тем курсов через API с помощью Alamofire и хранение в кэше с помощью Realweb](https://github.com/flyer2001/iOSCources2019/tree/master/Lesson%2008%20Altarix%20API%20Homework)
 
-![Demo](https://github.com/flyer2001/iOSCources2019/blob/master/Lesson%2008%20Altarix%20API%20Homework/Altarix_Api_Homework.gif)
+![Demo](https://github.com/flyer2001/iOSCources2019/blob/master/Lesson%2008%20Altarix%20API%20Homework/demo.gif)
