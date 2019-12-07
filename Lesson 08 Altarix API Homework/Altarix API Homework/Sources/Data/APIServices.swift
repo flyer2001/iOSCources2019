@@ -38,9 +38,6 @@ final public class APIServices {
         }
     }
     
-   func getObjectLocal() -> Cource? {
-    return nil
-    }
 }
     
     
