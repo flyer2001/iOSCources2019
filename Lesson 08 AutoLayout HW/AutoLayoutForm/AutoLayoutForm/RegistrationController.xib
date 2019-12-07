@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationController" customModule="AutoLayoutForm" customModuleProvider="target">
             <connections>
+                <outlet property="buttonRegistration" destination="b8B-Iw-1U9" id="D1o-zF-VNH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

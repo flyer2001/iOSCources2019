@@ -10,8 +10,12 @@ import UIKit
 
 class RegistrationController: UIViewController {
 
+    @IBOutlet weak var buttonRegistration: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        buttonRegistration.layer.cornerRadius = 3.0
 
     }
 
