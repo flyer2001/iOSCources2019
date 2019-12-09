@@ -2,6 +2,7 @@
 
 import UIKit
 
+
 struct HTTPStatusCode {
     var code: Int
     
@@ -22,7 +23,36 @@ struct HTTPStatusCode {
         case conflict
         case gone
         case undefine
-        }
+        
+    var errorMsg: String {
+        switch self {
+        case .badRequest:
+            return "Bad Request"
+        case .unauthorized:
+            return "Unauthorized"
+        case .paymentRequired:
+            return "Payment Required"
+        case .forbidden:
+            return "Forbidden"
+        case .notFound:
+            return "notFound"
+        case .methodNotAllowed:
+            return "Method not allowed"
+        case .notAcceptable:
+            return "Not acceptable"
+        case .proxyAuthenticationRequired:
+            return "Proxy authentication required"
+        case .requestTimeout:
+            return "Request timout"
+        case .conflict:
+            return "Conflict"
+        case .gone:
+            return "Gone"
+        case .undefine:
+            return "Undefine"
+            }
+       }
+    }
 
     var description: DescriptionOfStatus {
         switch self.code {
@@ -55,4 +85,4 @@ struct HTTPStatusCode {
 }
     
 let status = HTTPStatusCode(code: 400)
-print(status.description)
+print(status.description.errorMsg)
