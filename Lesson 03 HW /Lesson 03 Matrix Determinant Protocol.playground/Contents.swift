@@ -15,28 +15,72 @@ protocol MatrixTestable {
 
 class Matrix: MatrixTestable {
     
+    
     let dimension: Int
-    var data: [[Int]]
+    var dataFromConstructor: [[Int]]
     
     func determinant() -> Int {
-        
-        // здесь по идее надо считать с помощью рекурсии определитель матрицы, но не осилил
-        func determinate (matrix: [[Int]], n: Int) -> Int {
-        return matrix[0][0] * matrix [1][1] - matrix[0][1] * matrix[1][0]
-        }
-        
-        if dimension != 2 {return 0}  // костыль))))
-        return Int(determinate(matrix: data, n: dimension))
-        
+        return determinantRecursive(dataFromConstructor, dimension)
     }
     
-    required init(dimension: Int, elementConstructor: ((Int, Int) -> Int)) {
+    private func determinantRecursive(_ matrix: [[Int]], _ size: Int ) -> Int {
+        var m, n, det, s: Int
+        
+        var tempMatrix = Array(repeating: Array(repeating: 0, count: size ), count: size)
+        if size == 1 {return matrix[0][0]} else {
+            det = 0
+            s = 1
+            for c in 0..<size {
+                m = 0
+                n = 0
+                for i in 0..<size {
+                    for j in 0..<size {
+                        tempMatrix[i][j] = 0
+                        if i != 0 && j != c {
+                            tempMatrix[m][n] = matrix[i][j]
+                            if n < (size - 2) {
+                                n += 1
+                            } else {
+                                n = 0
+                                m += 1
+                            }
+                        }
+                    }
+                }
+                det = det + s * (matrix[0][c] * determinantRecursive(tempMatrix, size - 1))
+                s = -s
+            }
+        }
+
+        return det
+    
+    }
+    
+    required init(dimension: Int, elementConstructor: ((_ column: Int, _ row: Int) -> Int)) {
         self.dimension = dimension
-        self.data = Array(repeating: Array(repeating: 0, count: dimension), count: dimension)
+        // создаëм матрицу под размерность
+        var tempMatrix = Array(repeating: Array(repeating: 0, count: dimension), count: dimension)
+        // заполняем матрицу через замыкание elementConstructor
+        for column in 0..<tempMatrix.count {
+            for row in 0..<tempMatrix[0].count {
+                tempMatrix[column][row] = elementConstructor(column, row)
+            }
+        }
+
+        self.dataFromConstructor = tempMatrix
     }
 
 }
 
-var matrix = Matrix(dimension: 2, elementConstructor: {row, column in return 2 * row + column})
-matrix.data = [[0, 1], [5, 6]]
-let determinant = matrix.determinant()
+var matrix = Matrix(dimension: 3, elementConstructor: {column, row in return row + column + Int.random(in: 0..<10)})
+
+matrix.dataFromConstructor
+matrix.determinant
+
+
+
+
+
+
+
+
