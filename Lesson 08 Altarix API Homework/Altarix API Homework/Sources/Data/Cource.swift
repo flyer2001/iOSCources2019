@@ -6,7 +6,6 @@
 //  Copyright © 2019 Sergey Popyvanov. All rights reserved.
 //
 
-import Foundation
 import Realm
 import RealmSwift
 
@@ -48,11 +47,6 @@ class Day : Object, Decodable {
     @objc dynamic var title: String
     var items = List<Item> ()
     
-    enum CodingKeys: String, CodingKey {
-        case title
-        case items
-    }
-    
     required init(title: String){
         self.title = title
         super.init()
@@ -71,13 +65,6 @@ class Item : Object, Decodable {
     @objc dynamic var itemDescription: String
     @objc dynamic var timeString: String
     var links = List<Links>()
-    
-    enum CodingKeys: String, CodingKey {
-        case title
-        case itemDescription
-        case timeString
-        case links
-    }
     
     required init(title: String, itemDescription: String, timeString: String){
         self.title = title
@@ -98,11 +85,6 @@ class Item : Object, Decodable {
 class Links: Object, Decodable {
     @objc dynamic var url: String
     @objc dynamic var title: String
-    
-    enum CodingKeys: String, CodingKey {
-        case url
-        case title
-    }
 
     required init(url: String, title: String){
         self.title = title
