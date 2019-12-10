@@ -3,50 +3,53 @@
 import UIKit
 
 
-enum HTTPStatusCode {
-    case badRequest
-    case unauthorized
-    case paymentRequired
-    case forbidden
-    case notFound
-    case methodNotAllowed
-    case notAcceptable
-    case proxyAuthenticationRequired
-    case requestTimeout
-    case conflict
-    case gone
-    case undefine
+enum HTTPStatusCode: Int {
+    case badRequest = 400
+    case unauthorized = 401
+    case paymentRequired = 402
+    case forbidden = 403
+    case notFound = 404
+    case methodNotAllowed = 405
+    case notAcceptable = 406
+    case proxyAuthenticationRequired = 407
+    case requestTimeout = 408
+    case conflict = 409
+    case gone = 410
+    case undefine = 411
         
+
     var errorMsg: String {
         switch self {
             case .badRequest:
-                return "400 Bad Request"
+                return "Bad Request"
             case .unauthorized:
-                return "401 Unauthorized"
+                return "Unauthorized"
             case .paymentRequired:
-                return "402 Payment Required"
+                return "Payment Required"
             case .forbidden:
-                return "403 Forbidden"
+                return "Forbidden"
             case .notFound:
-                return "404 notFound"
+                return "notFound"
             case .methodNotAllowed:
-                return "405 Method not allowed"
+                return "Method not allowed"
             case .notAcceptable:
-                return "406 Not acceptable"
+                return "Not acceptable"
             case .proxyAuthenticationRequired:
-                return "407 Proxy authentication required"
+                return "Proxy authentication required"
             case .requestTimeout:
-                return "408 Request timout"
+                return "Request timout"
             case .conflict:
-                return "409 Conflict"
+                return "Conflict"
             case .gone:
-                return "410 Gone"
+                return "Gone"
             case .undefine:
-                return "411 Undefine"
+                return "Undefine"
                 }
     }
 }
 
        
-let status = HTTPStatusCode.badRequest.errorMsg
+HTTPStatusCode.badRequest.rawValue // 400
+HTTPStatusCode.badRequest.errorMsg // "Bad Request"
+
 
